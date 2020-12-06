@@ -29,16 +29,7 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <div class="row">
-        <div class="col">
-          1 of 3
-        </div>
-        <div class="col">
-          2 of 3
-        </div>
-        <div class="col">
-        </div>
-      </div>
+     
     </div>
       <!--Make sure the date and time is displaying-->
       <!--create var to areas I want to target, target container, var createrow= $("<div>"), createrow.attr("id", "class", "row")-->
@@ -65,19 +56,27 @@
     createRow.attr("class", "row")
 
     var hour = $("<div>")
-    hour.attr("class", "col")
+    hour.attr("class", "col-1 hour")
       
     var note = $("<div>")
-    note.attr("class", "col")
+    note.attr("class", "col-6 description")
 
     var saveBtn = $("<button>")
-    saveBtn.attr("class", "col")
+    saveBtn.attr("class", "col-1 saveBtn")
 
     //append row to "container"
+      $(divEl).append(createRow)
+      
 
-    
     //append 3 columns to row
+      $(createRow).append(hour)
+      hour.text("mum")
 
+      $(createRow).append(note)
+      note.text("balsalsdj")
+
+      $(createRow).append(saveBtn)
+      saveBtn.text("skdhlsdkf")
     
 
 
