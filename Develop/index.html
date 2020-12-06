@@ -29,10 +29,24 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+       <!-- Timeblocks go here -->
+      <!--Make sure the date and time is displaying-->
+      <!--create var to areas I want to target, target container, var createrow= $("<div>"), createrow.attr("id", "class", "row")-->
+        <!--Make one row. If you can then make for loop to create the rest of the rows.-->
+        <!--Create column for row (hour block) check css if there is "hour"-->
+        <!--Create time block button-->
+        <!---->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script>
+    var DateTime = luxon.DateTime;
+    var date = (DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
+    console.log(date)
+    $("#currentDay").append(date)
+    
+    </script>
   </body>
 </html>
