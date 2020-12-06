@@ -29,24 +29,61 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-       <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="col">
+          1 of 3
+        </div>
+        <div class="col">
+          2 of 3
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
       <!--Make sure the date and time is displaying-->
       <!--create var to areas I want to target, target container, var createrow= $("<div>"), createrow.attr("id", "class", "row")-->
         <!--Make one row. If you can then make for loop to create the rest of the rows.-->
         <!--Create column for row (hour block) check css if there is "hour"-->
         <!--Create time block button-->
         <!---->
-    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script>
+
+
     var DateTime = luxon.DateTime;
     var date = (DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
     console.log(date)
     $("#currentDay").append(date)
     
+    var divEl = $(".container");
+
+    var createRow= $("<div>")
+    createRow.attr("class", "row")
+
+    var hour = $("<div>")
+    hour.attr("class", "col")
+      
+    var note = $("<div>")
+    note.attr("class", "col")
+
+    var saveBtn = $("<button>")
+    saveBtn.attr("class", "col")
+
+    //append row to "container"
+
+    
+    //append 3 columns to row
+
+    
+
+
     </script>
   </body>
 </html>
+
+
+
