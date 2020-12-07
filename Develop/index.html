@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="jquery" href="luxon.js"
     <title>Work Day Scheduler</title>
   </head>
 
@@ -31,7 +32,52 @@
     <div class="container">
      
     </div>
-      <!--Make sure the date and time is displaying-->
+      <div class="row">
+        <div class="col-md-1 col-sm-2 hour pt-4">9:00AM</div>
+        <input id="9am" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4 ">10:00AM</div>
+        <input id="10Ram" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">11:00AM</div>
+        <input id="11am" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">12:00PM</div>
+        <input id="12pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">1:00PM</div>
+        <input id="1pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">2:00PM</div>
+        <input id="2pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">3:00PM</div>
+        <input id="3pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">4:00PM</div>
+        <input id="4pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      <div class="row">
+        <div class="col-md-1 hour pt-4">5:00PM</div>
+        <input id="5pm" class="col-md-10">
+        <button class="col-md-1 saveBtn" data-hour=9></button>
+      </div>
+      </div>
       <!--create var to areas I want to target, target container, var createrow= $("<div>"), createrow.attr("id", "class", "row")-->
         <!--Make one row. If you can then make for loop to create the rest of the rows.-->
         <!--Create column for row (hour block) check css if there is "hour"-->
@@ -42,45 +88,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
-    <script>
+    <script src="luxon.js"></script>
 
-
-    var DateTime = luxon.DateTime;
-    var date = (DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
-    console.log(date)
-    $("#currentDay").append(date)
-    
-    var divEl = $(".container");
-
-    var createRow= $("<div>")
-    createRow.attr("class", "row")
-
-    var hour = $("<div>")
-    hour.attr("class", "col-1 hour")
-      
-    var note = $("<div>")
-    note.attr("class", "col-6 description")
-
-    var saveBtn = $("<button>")
-    saveBtn.attr("class", "col-1 saveBtn")
-
-    //append row to "container"
-      $(divEl).append(createRow)
-      
-
-    //append 3 columns to row
-      $(createRow).append(hour)
-      hour.text("mum")
-
-      $(createRow).append(note)
-      note.text("balsalsdj")
-
-      $(createRow).append(saveBtn)
-      saveBtn.text("skdhlsdkf")
-    
-
-
-    </script>
   </body>
 </html>
 
