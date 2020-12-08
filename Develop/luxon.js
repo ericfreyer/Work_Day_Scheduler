@@ -17,7 +17,7 @@ var hourTwo = (DateTime.fromObject({hour: 14}))
 var hourThree = (DateTime.fromObject({hour: 15}))
 var hourFour = (DateTime.fromObject({hour: 16}))
 var hourFive = (DateTime.fromObject({hour: 17}))
-$(".9am").append(hourNine)
+$("#9am").append(hourNine)
 $("#10am").append(hourTen)
 $("#11am").append(hourEleven)
 $("#12pm").append(hourTwelve)
@@ -35,21 +35,62 @@ console.log(hourNine)
 
 if ((hourNine.hour)<(now.hour)){
   console.log("true")
-  $("input:first").addClass("past")
+  $(".row1 input").addClass("past")
 }else if ((hourNine.hour)===(now.hour)){
-  $("input:first").addClass("present")
-}else ($("input:first").addClass("future"))
+  $(".row1 input").addClass("present")
+}else ($(".row1 input").addClass("future"))
 
 
+if ((hourTen.hour)<(now.hour)){
+  console.log("true")
+  $(".row2 input").addClass("past")
+}else if ((hourTen.hour)===(now.hour)){
+  $(".row2 input").addClass("present")
+}else ($(".row2 input").addClass("future"))
 
 
+if ((hourEleven.hour)<(now.hour)){
+  $(".row3 input").addClass("past")
+}else if ((hourEleven.hour)===(now.hour)){
+  $(".row3 input").addClass("present")
+}else ($(".row3 input").addClass("future"))
+
+if ((hourTwelve.hour)<(now.hour)){
+  $(".row4 input").addClass("past")
+}else if ((hourTwelve.hour)===(now.hour)){
+  $(".row4 input").addClass("present")
+}else ($(".row4 input").addClass("future"))
 
 
+if ((hourOne.hour)<(now.hour)){
+  $(".row5 input").addClass("past")
+}else if ((hourOne.hour)===(now.hour)){
+  $(".row5 input").addClass("present")
+}else ($(".row5 input").addClass("future"))
 
+if ((hourTwo.hour)<(now.hour)){
+  $(".row6 input").addClass("past")
+}else if ((hourTwo.hour)===(now.hour)){
+  $(".row6 input").addClass("present")
+}else ($(".row6 input").addClass("future"))
 
+if ((hourThree.hour)<(now.hour)){
+  $(".row7 input").addClass("past")
+}else if ((hourThree.hour)===(now.hour)){
+  $(".row7 input").addClass("present")
+}else ($(".row7 input").addClass("future"))
 
+if ((hourFour.hour)<(now.hour)){
+  $(".row8 input").addClass("past")
+}else if ((hourFour.hour)===(now.hour)){
+  $(".row8 input").addClass("present")
+}else ($(".row8 input").addClass("future"))
 
-
+if ((hourFive.hour)<(now.hour)){
+  $(".row9 input").addClass("past")
+}else if ((hourFive.hour)===(now.hour)){
+  $(".row9 input").addClass("present")
+}else ($(".row9 input").addClass("future"))
 
 
 
