@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+getItem()
+
+function getItem(){
+localStorage.getItem("content"); 
+}
 
 var DateTime = luxon.DateTime;
 var date = (DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'}));
@@ -7,7 +12,6 @@ $("#currentDay").append(date)
 
 
 var now = DateTime.local();
-
 var hourNine = (DateTime.fromObject({hour: 9}))
 var hourTen = (DateTime.fromObject({hour: 10}))
 var hourEleven = (DateTime.fromObject({hour: 11}))
@@ -26,11 +30,6 @@ $("#2pm").append(hourTwo)
 $("#3pm").append(hourThree)
 $("#4pm").append(hourFour)
 $("#5pm").append(hourFive)
-
-console.log(now.hour)
-console.log(hourOne.hour)
-console.log(hourNine)
-
 
 
 if ((hourNine.hour)<(now.hour)){
@@ -55,6 +54,7 @@ if ((hourEleven.hour)<(now.hour)){
   $(".row3 input").addClass("present")
 }else ($(".row3 input").addClass("future"))
 
+
 if ((hourTwelve.hour)<(now.hour)){
   $(".row4 input").addClass("past")
 }else if ((hourTwelve.hour)===(now.hour)){
@@ -68,11 +68,13 @@ if ((hourOne.hour)<(now.hour)){
   $(".row5 input").addClass("present")
 }else ($(".row5 input").addClass("future"))
 
+
 if ((hourTwo.hour)<(now.hour)){
   $(".row6 input").addClass("past")
 }else if ((hourTwo.hour)===(now.hour)){
   $(".row6 input").addClass("present")
 }else ($(".row6 input").addClass("future"))
+
 
 if ((hourThree.hour)<(now.hour)){
   $(".row7 input").addClass("past")
@@ -80,11 +82,13 @@ if ((hourThree.hour)<(now.hour)){
   $(".row7 input").addClass("present")
 }else ($(".row7 input").addClass("future"))
 
+
 if ((hourFour.hour)<(now.hour)){
   $(".row8 input").addClass("past")
 }else if ((hourFour.hour)===(now.hour)){
   $(".row8 input").addClass("present")
 }else ($(".row8 input").addClass("future"))
+
 
 if ((hourFive.hour)<(now.hour)){
   $(".row9 input").addClass("past")
@@ -101,37 +105,42 @@ if ((hourFive.hour)<(now.hour)){
 
 
 
+$(".saveBtn").click(function (){
+  var contentInput = $("input").val().trim();
+  localStorage.setItem("content", contentInput);
+})
 
 
+$("#9am").children("input").val(localStorage.getItem("content"));
+
+  $("#10am").children("input").val(localStorage.getItem("10am"));
+
+  $("#11am").children("input").val(localStorage.getItem("11am"));
+
+  $("#12pm").children("input").val(localStorage.getItem("12pm"));
+
+  $("#1pm").children("input").val(localStorage.getItem("1pm"));
+
+  $("#2pm").children("input").val(localStorage.getItem("2pm"));
+
+  $("#3pm").children("input").val(localStorage.getItem("3pm"));
+
+  $("#4pm").children("input").val(localStorage.getItem("4pm"));
+
+  $("#5pm").children("input").val(localStorage.getItem("5pm"));
 
 
-//if ((dateHourFive.hour)>(date.hour)){
+//.val() get user input look into it
+//also, check activity 8  a.attr("data-name", movies[i]); and var movieName = $(this).attr("data-name") use this instead of grabbing from text?
+//https://api.jquery.com/attr/
 
+//function getStoredContent() {
+  //JSON.parse(localStorage.getItem("content"));
 //}
 
-
-//use dateHour interval for each row??
-
-
-//hourOfRow = ???? how to make hour of row = to certain number
-
-
-//var currentHour = hourOfRow
-
-
-//if (dateHour===currentHour){
-  //  addclass(".present")
-//}
-
-
-//if (dateHour>currentHour){
-    //addclass(".past")
-//}
-
-//if (date>dateHourFive){
-  //  dateHourFive.addclass(".future")
-//}
-
-
+//getStoredContent()
 
 });
+
+
+

@@ -44,7 +44,7 @@ textarea{
 
 .past {
   background-color: #d3d3d3;
-  color: rgb(245, 50, 50);
+  color: rgb(14, 13, 13);
 }
 
 .present {
@@ -54,7 +54,7 @@ textarea{
 
 .future {
   background-color: #77dd77;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .saveBtn {
