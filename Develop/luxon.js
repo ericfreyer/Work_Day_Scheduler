@@ -105,29 +105,33 @@ if ((hourFive.hour)<(now.hour)){
 
 
 
-$(".saveBtn").click(function (){
-  var contentInput = $("input").val().trim();
-  localStorage.setItem("content", contentInput);
+$("#saveBtn1").click(function (){
+  var contentNine = $("#9am").val().trim();
+  localStorage.setItem("content1", contentNine);
 })
+  $("#9am").val(localStorage.getItem("content1"));
 
 
-$("#9am").val(localStorage.getItem("content"));
+  $("#saveBtn2").click(function (){
+    var contentTen = $("#10am").val().trim();
+    localStorage.setItem("content2", contentTen);
+  })
 
-  $("#10am").val(localStorage.getItem("10am"));
+  $("#10am").val(localStorage.getItem("content2"));
 
-  $("#11am").val(localStorage.getItem("11am"));
+  //$("#11am").val(localStorage.getItem("content"));
 
-  $("#12pm").val(localStorage.getItem("12pm"));
+ // $("#12pm").val(localStorage.getItem("content"));
 
-  $("#1pm").val(localStorage.getItem("1pm"));
+//  $("#1pm").val(localStorage.getItem("content"));
 
-  $("#2pm").val(localStorage.getItem("2pm"));
+ // $("#2pm").val(localStorage.getItem("content"));
 
-  $("#3pm").val(localStorage.getItem("3pm"));
+ // $("#3pm").val(localStorage.getItem("content"));
 
-  $("#4pm").val(localStorage.getItem("4pm"));
+ // $("#4pm").val(localStorage.getItem("content"));
 
-  $("#5pm").val(localStorage.getItem("5pm"));
+//  $("#5pm").val(localStorage.getItem("content"));
 
 
 //.val() get user input look into it
