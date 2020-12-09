@@ -111,23 +111,23 @@ $(".saveBtn").click(function (){
 })
 
 
-$("#9am").children("input").val(localStorage.getItem("content"));
+$("#9am").val(localStorage.getItem("content"));
 
-  $("#10am").children("input").val(localStorage.getItem("10am"));
+  $("#10am").val(localStorage.getItem("10am"));
 
-  $("#11am").children("input").val(localStorage.getItem("11am"));
+  $("#11am").val(localStorage.getItem("11am"));
 
-  $("#12pm").children("input").val(localStorage.getItem("12pm"));
+  $("#12pm").val(localStorage.getItem("12pm"));
 
-  $("#1pm").children("input").val(localStorage.getItem("1pm"));
+  $("#1pm").val(localStorage.getItem("1pm"));
 
-  $("#2pm").children("input").val(localStorage.getItem("2pm"));
+  $("#2pm").val(localStorage.getItem("2pm"));
 
-  $("#3pm").children("input").val(localStorage.getItem("3pm"));
+  $("#3pm").val(localStorage.getItem("3pm"));
 
-  $("#4pm").children("input").val(localStorage.getItem("4pm"));
+  $("#4pm").val(localStorage.getItem("4pm"));
 
-  $("#5pm").children("input").val(localStorage.getItem("5pm"));
+  $("#5pm").val(localStorage.getItem("5pm"));
 
 
 //.val() get user input look into it
