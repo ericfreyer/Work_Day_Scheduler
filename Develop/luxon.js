@@ -1,39 +1,39 @@
 $(document).ready(function () {
 
-getItem()
-
-function getItem(){
-localStorage.getItem("content"); 
-}
-
 var DateTime = luxon.DateTime;
-var date = (DateTime.local().toLocaleString({ weekday: 'long', month: 'long', day: '2-digit', hour: '2-digit', minute: '2-digit'}));
-$("#currentDay").append(date)
+var date = (DateTime.local().toLocaleString(
+  { weekday: 'long',
+    month: 'long',
+    day: '2-digit', 
+    hour: '2-digit', 
+    minute: '2-digit'
+  }
+  ));
+$("#currentDay").append(date);
 
 
 var now = DateTime.local();
-var hourNine = (DateTime.fromObject({hour: 9}))
-var hourTen = (DateTime.fromObject({hour: 10}))
-var hourEleven = (DateTime.fromObject({hour: 11}))
-var hourTwelve = (DateTime.fromObject({hour: 12}))
-var hourOne = (DateTime.fromObject({hour: 13}))
-var hourTwo = (DateTime.fromObject({hour: 14}))
-var hourThree = (DateTime.fromObject({hour: 15}))
-var hourFour = (DateTime.fromObject({hour: 16}))
-var hourFive = (DateTime.fromObject({hour: 17}))
-$("#9am").append(hourNine)
-$("#10am").append(hourTen)
-$("#11am").append(hourEleven)
-$("#12pm").append(hourTwelve)
-$("#1pm").append(hourOne)
-$("#2pm").append(hourTwo)
-$("#3pm").append(hourThree)
-$("#4pm").append(hourFour)
-$("#5pm").append(hourFive)
+var hourNine = (DateTime.fromObject({hour: 9}));
+var hourTen = (DateTime.fromObject({hour: 10}));
+var hourEleven = (DateTime.fromObject({hour: 11}));
+var hourTwelve = (DateTime.fromObject({hour: 12}));
+var hourOne = (DateTime.fromObject({hour: 13}));
+var hourTwo = (DateTime.fromObject({hour: 14}));
+var hourThree = (DateTime.fromObject({hour: 15}));
+var hourFour = (DateTime.fromObject({hour: 16}));
+var hourFive = (DateTime.fromObject({hour: 17}));
+$("#9am").append(hourNine);
+$("#10am").append(hourTen);
+$("#11am").append(hourEleven);
+$("#12pm").append(hourTwelve);
+$("#1pm").append(hourOne);
+$("#2pm").append(hourTwo);
+$("#3pm").append(hourThree);
+$("#4pm").append(hourFour);
+$("#5pm").append(hourFive);
 
 
 if ((hourNine.hour)<(now.hour)){
-  console.log("true")
   $(".row1 input").addClass("past")
 }else if ((hourNine.hour)===(now.hour)){
   $(".row1 input").addClass("present")
@@ -41,7 +41,6 @@ if ((hourNine.hour)<(now.hour)){
 
 
 if ((hourTen.hour)<(now.hour)){
-  console.log("true")
   $(".row2 input").addClass("past")
 }else if ((hourTen.hour)===(now.hour)){
   $(".row2 input").addClass("present")
@@ -99,16 +98,10 @@ if ((hourFive.hour)<(now.hour)){
 
 
 
-
-
-
-
-
-
-$("#saveBtn1").click(function (){
-  var contentNine = $("#9am").val().trim();
-  localStorage.setItem("content1", contentNine);
-})
+  $("#saveBtn1").click(function (){
+    var contentNine = $("#9am").val().trim();
+    localStorage.setItem("content1", contentNine);
+  })
   $("#9am").val(localStorage.getItem("content1"));
 
 
@@ -116,33 +109,53 @@ $("#saveBtn1").click(function (){
     var contentTen = $("#10am").val().trim();
     localStorage.setItem("content2", contentTen);
   })
-
   $("#10am").val(localStorage.getItem("content2"));
 
-  //$("#11am").val(localStorage.getItem("content"));
 
- // $("#12pm").val(localStorage.getItem("content"));
-
-//  $("#1pm").val(localStorage.getItem("content"));
-
- // $("#2pm").val(localStorage.getItem("content"));
-
- // $("#3pm").val(localStorage.getItem("content"));
-
- // $("#4pm").val(localStorage.getItem("content"));
-
-//  $("#5pm").val(localStorage.getItem("content"));
+  $("#saveBtn3").click(function (){
+    var contentEleven = $("#11am").val().trim();
+    localStorage.setItem("content3", contentEleven);
+  })
+  $("#11am").val(localStorage.getItem("content3"));
 
 
-//.val() get user input look into it
-//also, check activity 8  a.attr("data-name", movies[i]); and var movieName = $(this).attr("data-name") use this instead of grabbing from text?
-//https://api.jquery.com/attr/
+  $("#saveBtn4").click(function (){
+    var contentTwelve = $("#12pm").val().trim();
+    localStorage.setItem("content4", contentTwelve);
+  })
+  $("#12pm").val(localStorage.getItem("content4"));
 
-//function getStoredContent() {
-  //JSON.parse(localStorage.getItem("content"));
-//}
 
-//getStoredContent()
+  $("#saveBtn5").click(function (){
+    var contentOne = $("#1pm").val().trim();
+    localStorage.setItem("content5", contentOne);
+  })
+  $("#1pm").val(localStorage.getItem("content5"));
+
+  $("#saveBtn6").click(function (){
+    var contentTwo = $("#2pm").val().trim();
+    localStorage.setItem("content6", contentTwo);
+  })
+  $("#2pm").val(localStorage.getItem("content6"));
+
+  $("#saveBtn7").click(function (){
+    var contentThree = $("#3pm").val().trim();
+    localStorage.setItem("content7", contentThree);
+  })
+  $("#3pm").val(localStorage.getItem("content7"));
+
+
+  $("#saveBtn8").click(function (){
+    var contentFour = $("#4pm").val().trim();
+    localStorage.setItem("content8", contentFour);
+  })
+  $("#4pm").val(localStorage.getItem("content8"));
+
+  $("#saveBtn9").click(function (){
+    var contentFive = $("#5pm").val().trim();
+    localStorage.setItem("content9", contentFive);
+  })
+  $("#5pm").val(localStorage.getItem("content9"));
 
 });
 
